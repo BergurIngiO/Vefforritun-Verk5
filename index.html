@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verkefni 5 - Viðburðir</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1 class="tonleikar">Tónleikar</h1>
+    <div class="wrapper">
+    %for event in data['results']:
+        <div class="box">
+            <h3>{{event['eventDateName']}}</h3>
+            <h4>{{event['eventHallName']}}</h4>
+            <h4>{{event['dateOfShow'][:10]}}</h4>
+            <img src="{{event['imageSource']}}">
+        </div>
+    %end
+    </div>
+
+</body>
+</html>
